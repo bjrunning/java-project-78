@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Predicate;
 
-public abstract class Schema {
+public abstract class BaseSchema {
     private final List<Predicate<Object>> requirements = new ArrayList<>();
 
     abstract void required();
