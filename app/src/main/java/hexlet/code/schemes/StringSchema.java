@@ -2,15 +2,15 @@ package hexlet.code.schemes;
 
 import java.util.function.Predicate;
 
-public class StringSchema extends Schema {
+public class StringSchema extends BaseSchema {
     {
-        Predicate<Object> stringValidation = o -> o == null || o instanceof String && ((String) o).isEmpty();
-        addRequirement(stringValidation);
+        init = o -> o == null || o instanceof String && ((String) o).isEmpty();
+        addRequirement(init);
     }
     @Override
     public void required() {
         Predicate<Object> newReq = o -> o instanceof String && !((String) o).isEmpty();
-        removeAllPredicates();
+        removeInitReq();
         addRequirement(newReq);
     }
 
