@@ -26,4 +26,8 @@ public abstract class BaseSchema {
     protected void removeInitReq() {
         requirements.remove(init);
     }
+
+    protected void removeSpecifiedReq(Predicate<Object> req) {
+        requirements.remove(req);
+    }
 }
