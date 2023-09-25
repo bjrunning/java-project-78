@@ -10,7 +10,7 @@ install:
 	make -C app install
 
 run-dist:
-	make -C run-dist
+	make -C app run-dist
 
 run:
 	make -C app run
@@ -23,10 +23,9 @@ report:
 
 lint:
 	make -C app lint
-
+	
 update-deps:
 	make -C app update-deps
-
 
 build-run: build run
 
