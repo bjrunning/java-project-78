@@ -1,4 +1,5 @@
 package hexlet.code.schemas;
 
-public class SchemaName {
+public enum SchemaName {
+    REQUIRED, POSITIVE, RANGE, CONTAINS, MIN_LENGTH, SIZE_OF, SHAPE, INITIAL
 }
